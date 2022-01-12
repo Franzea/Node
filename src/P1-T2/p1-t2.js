@@ -104,4 +104,23 @@ app.get('/servicio',function(req,res){
   });
 });
 
+
+
+//Modificar datos de un usuario
+app.get('/modificar_usuario',function(req,res){
+
+  const id = req.query.id_usuario;
+  const tlf = req.query.telefono;
+  const email = req.query.email;
+  const sql = "UPDATE usuarios set  Telefono = "+tlf+", Email"+email+" where ID_Usuario = "+id;
+
+  datos.con.query(sql, function (err, result) {
+    if (err) throw err;
+
+    console.log("Result: " + JSON.stringify(result,null,2));
+
+    res.json(result);
+  });
+});
+
 var server = app.listen(5000,function(err,re) {});

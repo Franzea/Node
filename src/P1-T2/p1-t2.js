@@ -116,8 +116,10 @@ app.post('/modificar_usuario',function(req,res){
   const id = req.body.id_usuario;
   const tlf = req.body.telefono;
   const email = req.body.email;
+  const nombre = req.body.nombre;
 
-  const sql = "UPDATE usuarios set  Telefono = "+tlf+", Email ='"+email+"' where ID_Usuario = "+id;
+  //Esto no furula, preguntar Javi
+  const sql = "UPDATE usuarios set  Telefono = "+tlf+", Email ='"+email+"' Nombre ='"+nombre+"' where ID_Usuario = "+id;
 
   datos.con.query(sql, function (err, result) {
     if (err) throw res.json({Estado: "ERROR", Error: "Alguno de los datos a modificar no es correcto"});

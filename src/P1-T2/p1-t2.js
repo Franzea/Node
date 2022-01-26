@@ -118,8 +118,7 @@ app.post('/modificar_usuario',function(req,res){
   const email = req.body.email;
   const nombre = req.body.nombre;
 
-  //Esto no furula, preguntar Javi
-  const sql = "UPDATE usuarios set  Telefono = "+tlf+", Email ='"+email+"' Nombre ='"+nombre+"' where ID_Usuario = "+id;
+  const sql = "UPDATE usuarios set  Telefono = "+tlf+", Email ='"+email+"', Nombre ='"+nombre+"' where ID_Usuario = "+id;
 
   datos.con.query(sql, function (err, result) {
     if (err) throw res.json({Estado: "ERROR", Error: "Alguno de los datos a modificar no es correcto"});
@@ -128,6 +127,48 @@ app.post('/modificar_usuario',function(req,res){
 
     res.json({Estado: "OK"});
   });
+});
+
+
+
+//Crear usuario
+app.post('/crear_usuario',function(req,res){
+
+  const tlf = req.body.telefono;
+  const email = req.body.email;
+  const nombre = req.body.nombre;
+  const pass = req.body.pass;
+
+  const sql = "INSERT INTO usuarios(Contraseña, Nombre, Telefono, Email) VALUES ('"+pass+"', '"+nombre+"', '"+tlf+"',  '"+email+"')" ;
+  console.log(sql);
+  datos.con.query(sql, function (err, result) {
+    if (err) {
+      console.log(err.message)
+      res.json({Estado: "ERROR", Error: err.message});
+    }
+    console.log("Result: " + JSON.stringify(result,null,2));
+
+    res.json({Estado: "OK"});
+  });
+});
+
+
+
+//Eliminar usuario
+app.post('/eliminar_usuario', function (req,res) {
+
+  const id = req.query.id_usuario;
+
+  const sql = "delete from usuarios where ID_Usuario = "+id;
+
+  con.query(sql, function (err, result) {
+    if (err) throw res.json({Estado: "ERROR", Error: "Alguno dato no es correcto"});
+
+    console.log("Result: " + JSON.stringify(result,null,2));
+
+    res.json({Estado: "OK" });
+  });
+
 });
 
 var server = app.listen(5000,function(err,re) {});

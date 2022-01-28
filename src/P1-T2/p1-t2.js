@@ -157,18 +157,25 @@ app.post('/crear_usuario',function(req,res){
 //Eliminar usuario
 app.post('/eliminar_usuario', function (req,res) {
 
-  const id = req.query.id_usuario;
+  const id = req.body.id_usuario;
 
   const sql = "delete from usuarios where ID_Usuario = "+id;
 
-  con.query(sql, function (err, result) {
+  datos.con.query(sql, function (err, result) {
     if (err) throw res.json({Estado: "ERROR", Error: "Alguno dato no es correcto"});
 
     console.log("Result: " + JSON.stringify(result,null,2));
 
     res.json({Estado: "OK" });
   });
-
 });
+
+
+
+//
+
+
+
+//
 
 var server = app.listen(5000,function(err,re) {});

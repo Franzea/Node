@@ -302,4 +302,38 @@ app.post('/eliminar_servicio', function (req,res) {
   });
 });
 
+
+
+//Información de un usuario y su lista de vehículos en la misma llamada filtrando por ID de usuario
+app.get('/filtrando_usuario_vehiculos', function (req,res) {
+
+    const id = req.query.id_usuario;
+    const sql = "select u.*, v.* from usuarios u join vehiculos v on u.ID_Usuario=v.id_usuario where u.ID_Usuario=" + id;
+
+    datos.con.query(sql, function (err, result) {
+      if (err) throw err;
+
+      console.log("Result: " + JSON.stringify(result,null,2));
+
+      res.json(result);
+    });
+});
+
+
+
+//Información de un vehículo y su lista de servicios en la misma llamada filtrando por ID de usuario 
+app.get ('/filtrando_vehiculos_servicios', function (req, res) {
+
+  const id = req.query.id_usuario;
+  const sql = "select v.*, s.* from vehiculos v join servicios s on v.ID_Vehiculo=s.ID_vehiculo where v.Id_usuario=" + id;
+
+  datos.con.query(sql, function (err, result) {
+    if (err) throw err;
+
+      console.log("Result: " + JSON.stringify(result,null,2));
+
+      res.json(result);
+    });
+});
+
 var server = app.listen(5000,function(err,re) {});

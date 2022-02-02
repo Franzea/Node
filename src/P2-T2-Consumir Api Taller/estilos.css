@@ -1,0 +1,47 @@
+body{
+    background-image: url("foto1.jpg");
+    background-repeat: no-repeat;
+}
+
+.conte1{
+
+    width: 470px;
+    margin: 0 auto;
+}
+
+.fondo1{
+    background-color: rgb(112, 112, 112);
+    border-radius: 10px;
+    opacity: 0.6;
+    padding: 5px;
+    height: 500px;
+}
+
+form{
+
+    padding-left: 125px;
+}
+
+samp{
+
+    color: white;
+    font-family: Verdana;
+}
+
+.campotexto{
+
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.texto{
+
+    margin-left: 37px;
+}
+
+.boton{
+
+    margin: 20px;
+    margin-top: 10px;
+    margin-left: 48px;
+}

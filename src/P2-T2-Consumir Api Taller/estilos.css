@@ -5,43 +5,58 @@ body{
 
 .conte1{
 
-    width: 470px;
+    width: 575px;
     margin: 0 auto;
-}
-
-.fondo1{
-    background-color: rgb(112, 112, 112);
+    background-color: rgb(61, 61, 61);
     border-radius: 10px;
-    opacity: 0.6;
-    padding: 5px;
-    height: 500px;
-}
-
-form{
-
-    padding-left: 125px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    opacity: 0.8;
 }
 
 samp{
 
     color: white;
     font-family: Verdana;
+    margin-top: 20px;
+    margin-left: 37px;
+}
+
+h1{
+    text-align: center;
+    color: white;
+    font-family: Arial,sans-serif;
 }
 
 .campotexto{
 
     margin-top: 10px;
-    margin-left: 20px;
+    margin-left: 5px;
+    border-radius: 10px;
+    border: 1px solid white;
 }
 
 .texto{
 
-    margin-left: 37px;
+    margin-left: 150px;
 }
 
 .boton{
 
     margin: 20px;
     margin-top: 10px;
-    margin-left: 48px;
+    margin-left: 5px;
+    width: 120px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.boton:hover {
+
+    background-color: grey;
+    color: white;
+    border: 1px solid grey;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }

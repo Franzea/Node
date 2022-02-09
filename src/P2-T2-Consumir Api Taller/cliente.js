@@ -1,27 +1,18 @@
-//const API_URL = 'http://localhost:3000/TOTALusuario';
-const API_URL = 'http://localhost:3000/datosusuario?idUsuario=15';
+function lista_usuarios() {
 
-
-
-/*
-const xhr = new XMLHttpRequest();
-function consume(){
-    if(this.readuState == 4 && this.status ==200){  
-        //0 = UNSET, no se ha llamado al metodo open
-        //1 = OPENED; se ha llamado al metodo open
-        //2 = HEADERS_RECIBED; Se esta llamando al metodo send
-        //3 = LOADING; recibiendo respuesta
-        //4= DONE, se ha completado la operacion
-        const data = JSON.parse(this.response);
-        const HT
-    }
+    const API_URL = 'http://localhost:5000/usuarios';
+    api(API_URL);
 }
 
-xhr.addEventListener("load", consume);
-xhr.open("GET", '${API_URL}/users');
-xhr.send();*/
+function usuari_id() {
+    
+    var identificador = document.querySelector("input").value;
+    const API_URL = 'http://localhost:5000/usuario?id_usuario='+identificador;
+    api(API_URL);
+}
 
-fetch(API_URL,{
+function api(api_url) {
+    fetch(api_url,{
     
         method: 'GET',
         mode: 'cors',
@@ -31,3 +22,4 @@ fetch(API_URL,{
 })
   .then(response => response.json())
   .then(data => console.log(data));
+}

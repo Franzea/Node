@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taller Pacopepe</title>
     <link rel="stylesheet" href="estilos.css">
+    <script src="cliente.js"></script>
 </head>
 <body>
 
@@ -17,11 +18,11 @@
             <!---->
             <samp>Información de un usuario:</samp>
             <input class="campotexto" type="text" name="idusuario" placeholder="Id Usuario....">
-            <input class="boton" type="button" value="Consultar Usuario" name="mostrarusus"><br>
+            <input class="boton" type="button" value="Consultar Usuario" name="mostrarusus" onclick="usuari_id()"><br>
 
             <!---->
             <samp class="texto">Lista de usuarios:</samp>
-            <input class="boton" type="button" value="Mostrar Usuarios" name="mostrarusus">
+            <input class="boton" type="button" value="Mostrar Usuarios" name="mostrarusus" onclick="lista_usuarios()">
         </form>
 
     </div>

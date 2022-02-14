@@ -12,6 +12,7 @@ function usuari_id() {
 }
 
 function api(api_url) {
+
     fetch(api_url,{
     
         method: 'GET',
@@ -21,5 +22,33 @@ function api(api_url) {
              'Content-Type': 'application/json'}
 })
   .then(response => response.json())
-  .then(data => console.log(data));
+  .then(data => {let texto = "";
+
+    if (api_url == "http://localhost:5000/usuarios") {
+        
+        var sudtitulo = document.createElement("h3");
+        sudtitulo.textContent = "Usuarios Registrados";
+        document.querySelectorAll("div")[1].appendChild(sudtitulo);
+    } 
+    else {
+
+        var identificador = document.querySelector("input").value;
+
+        var sudtitulo = document.createElement("h3");
+        sudtitulo.textContent = "Usuario "+identificador;
+        document.querySelectorAll("div")[1].appendChild(sudtitulo);
+    }
+
+    for (let i = 0; i<data.length; i++){
+
+        var article = document.createElement("article");
+
+        var parrafo = document.createElement("p");
+        parrafo.textContent = "Nombre: "+data[i].Nombre+" / Teléfono: "+data[i].Telefono+" / Email: "+data[i].Email;
+        article.appendChild(parrafo);
+
+        document.querySelectorAll("div")[1].appendChild(article);
+    }
+    
+    });
 }

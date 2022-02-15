@@ -2,6 +2,12 @@
     background-image: url("foto1.jpg");
     background-color: #5c85ac;
   }
+
+  #fotopotada{
+    margin-left: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
   
   #logo{
     margin-top: -15px;
@@ -19,71 +25,87 @@
     margin-bottom: 30px;
   }
 
+  .navcota{
+
+    margin-bottom: 0;
+  }
+
   #conte1{
 
-      width: 680px;
-      margin: 0 auto;
-      background-color: #004482;
-      border-radius: 10px;
-      padding-top: 10px;
-      padding-bottom: 20px;
-      opacity: 0.8;
+    width: 680px;
+    margin: 0 auto;
+    background-color: #004482;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    opacity: 0.8;
   }
 
   samp{
 
-      color: white;
-      font-family: Verdana;
-      margin-top: 20px;
-      margin-left: 37px;
+    color: white;
+    font-family: Verdana;
+    margin-top: 20px;
+  }
+
+  #s1{
+    margin-left: 37px;
+  }
+
+  #s2{
+    margin-left: 57px;
+  }
+
+  #s3{
+    margin-left: 190px;
   }
 
   h1{
-      text-align: center;
-      color: white;
-      font-family: Arial,sans-serif;
+    text-align: center;
+    color: white;
+    font-family: Arial,sans-serif;
   }
 
   .campotexto{
 
-      margin-top: 10px;
-      margin-left: 5px;
-      padding-left: 6px;    
-      border-radius: 10px;
-      border: 1px solid white;
+    margin-top: 10px;
+    margin-left: 5px;
+    padding-left: 6px;    
+    border-radius: 15px;
+    border: 1px solid white;
   }
 
   .texto{
 
-      margin-left: 150px;
+    margin-left: 150px;
   }
 
   .boton{
 
-      margin: 20px;
-      margin-top: 10px;
-      margin-left: 5px;
-      width: 150px;
-      background-color: white;
-      border: 1px solid white;
-      border-radius: 15px;
-      text-align: center;
+    margin: 20px;
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 150px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 15px;
+    text-align: center;
   }
 
   .boton:hover {
 
-      background-color: #0068FF;
-      color: white;
-      border: 1px solid #0068FF;
-      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: #0068FF;
+    color: white;
+    border: 1px solid #0068FF;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
   }
 
 
   /*Salida Datos*/
   h3{
-      text-align: center;
-      color: white;
-      font-family: Arial,sans-serif;
+    text-align: center;
+    color: white;
+    font-family: Arial,sans-serif;
   }
 
   h4{
@@ -93,29 +115,29 @@
   }
 
   article{
-      margin: 20px;
-      background-color: white;
-      border: 1px solid white;
-      border-radius: 15px;
-      width: 640px;
+    margin: 20px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 15px;
+    width: 640px;
   }
 
   article p{
-      margin-top: 20px;
-      font-family: Arial,sans-serif;
-      text-align: center;
+    margin-top: 20px;
+    font-family: Arial,sans-serif;
+    text-align: center;
   }
 
 
   /*Mapa*/
   #Map{
-      width: 590px;
-      margin: 0 auto;
-      background-color: #004482;
-      border-radius: 10px;
-      margin-top: 170px;
-      padding-bottom: 20px;
-      opacity: 0.8;
+    width: 900px;
+    margin: 0 auto;
+    background-color: #004482;
+    border-radius: 10px;
+    margin-top: 170px;
+    padding-bottom: 20px;
+    opacity: 0.8;
   }
 
   #Map h4{
@@ -123,9 +145,9 @@
   }
 
   iframe{
-      width: 550px;
-      margin-left: 20px;
-      border-radius: 10px;
+    width: 860px;
+    margin-left: 20px;
+    border-radius: 10px;
   }
 
 

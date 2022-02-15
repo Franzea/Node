@@ -1,0 +1,162 @@
+  body{
+    background-image: url("foto1.jpg");
+    background-color: #5c85ac;
+  }
+  
+  #logo{
+    margin-top: -15px;
+    margin-right: 20px;
+    margin-bottom: -12px;
+    float: none;
+    text-align: center;
+    display: block;
+    width: 70px;
+    height: 40px;
+  }
+
+  .navbar{
+
+    margin-bottom: 30px;
+  }
+
+  #conte1{
+
+      width: 680px;
+      margin: 0 auto;
+      background-color: #004482;
+      border-radius: 10px;
+      padding-top: 10px;
+      padding-bottom: 20px;
+      opacity: 0.8;
+  }
+
+  samp{
+
+      color: white;
+      font-family: Verdana;
+      margin-top: 20px;
+      margin-left: 37px;
+  }
+
+  h1{
+      text-align: center;
+      color: white;
+      font-family: Arial,sans-serif;
+  }
+
+  .campotexto{
+
+      margin-top: 10px;
+      margin-left: 5px;
+      padding-left: 6px;    
+      border-radius: 10px;
+      border: 1px solid white;
+  }
+
+  .texto{
+
+      margin-left: 150px;
+  }
+
+  .boton{
+
+      margin: 20px;
+      margin-top: 10px;
+      margin-left: 5px;
+      width: 150px;
+      background-color: white;
+      border: 1px solid white;
+      border-radius: 15px;
+      text-align: center;
+  }
+
+  .boton:hover {
+
+      background-color: #0068FF;
+      color: white;
+      border: 1px solid #0068FF;
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+
+  /*Salida Datos*/
+  h3{
+      text-align: center;
+      color: white;
+      font-family: Arial,sans-serif;
+  }
+
+  h4{
+    color: white;
+    text-align: center;
+    font-family: Arial,sans-serif;
+  }
+
+  article{
+      margin: 20px;
+      background-color: white;
+      border: 1px solid white;
+      border-radius: 15px;
+      width: 640px;
+  }
+
+  article p{
+      margin-top: 20px;
+      font-family: Arial,sans-serif;
+      text-align: center;
+  }
+
+
+  /*Mapa*/
+  #Map{
+      width: 590px;
+      margin: 0 auto;
+      background-color: #004482;
+      border-radius: 10px;
+      margin-top: 170px;
+      padding-bottom: 20px;
+      opacity: 0.8;
+  }
+
+  #Map h4{
+    margin-bottom: 25px;
+  }
+
+  iframe{
+      width: 550px;
+      margin-left: 20px;
+      border-radius: 10px;
+  }
+
+
+  /* Contacto */
+  #contacto {
+    padding-top: 30px;
+    height: 300px;
+    align-content: center;
+  }
+  
+  #contacto .apartado-contacto {
+    float: left;
+    width: 33%;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  #contacto .apartado-contacto i {
+    padding-bottom: 20px;
+  }
+  
+  #contacto .apartado-contacto p {
+    line-height: .8em;
+  }
+
+  i{
+    color: white;
+  }
+
+  #contacto p{
+    color: white;
+    text-align: center;
+    font-family: Arial,sans-serif;
+  }

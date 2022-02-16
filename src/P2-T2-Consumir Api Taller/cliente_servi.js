@@ -2,25 +2,21 @@ function servicio_id() {
     
     var identificador = document.querySelectorAll("input")[0].value;
     const API_URL = 'http://localhost:5000/servicio?id_servicio='+identificador;
-    api(API_URL);
-}
 
-function api(api_url) {
-
-    fetch(api_url,{
+    fetch(API_URL,{
     
         method: 'GET',
         mode: 'cors',
         headers: {
              'Accept': 'application/json',
              'Content-Type': 'application/json'}
-})
+    })
   .then(response => response.json())
   .then(data => {
 
     //Creamos texto informativo según que consulta
     var sudtitulo = document.createElement("h3");
-    sudtitulo.textContent = "Vehiculo "+identificador;
+    sudtitulo.textContent = "Servicio "+identificador;
     document.querySelectorAll("div")[1].appendChild(sudtitulo);
 
 
@@ -30,7 +26,7 @@ function api(api_url) {
         var article = document.createElement("article");
     
         var parrafo = document.createElement("p");
-        parrafo.textContent = "Nombre: "+data[i].Nombre+" / Precio: "+data[i].Precio+" / tipo_servicio: "+data[i].tipo_servicio+" / descripcion: "+data[i].descripcion+" / fecha: "+data[i].fecha;
+        parrafo.textContent = "Nombre: "+data[i].Nombre+" / Precio: "+data[i].Precio+" € / Tipo Servicio: "+data[i].tipo_servicio+" / Descripcion: "+data[i].descripcion+" / Fecha: "+data[i].fecha;
         article.appendChild(parrafo);
     
         document.querySelectorAll("div")[1].appendChild(article);

@@ -7,7 +7,7 @@ function vehiculo_id() {
 
 function servicios_vehi() {
     
-    var identificador = document.querySelectorAll("input")[1].value;
+    var identificador = document.querySelectorAll("input")[2].value;
     const API_URL = 'http://localhost:5000/servicios_vehiculo?id_vehiculo='+identificador;
     api(API_URL);
 }
@@ -27,25 +27,19 @@ function api(api_url) {
   .then(response => response.json())
   .then(data => {
 
-    //Creamos texto informativo según que consulta
-    if (api_url == 'http://localhost:5000/vehiculo?id_vehiculo='+identificador) {
-        
-        var sudtitulo = document.createElement("h3");
-        sudtitulo.textContent = "Vehiculo "+identificador;
-        document.querySelectorAll("div")[1].appendChild(sudtitulo);
-    } 
-    else {
-
-        var identificador = document.querySelector("input").value;
-
-        var sudtitulo = document.createElement("h3");
-        sudtitulo.textContent = "Servicios vehiculo "+identificador;
-        document.querySelectorAll("div")[1].appendChild(sudtitulo);
-    }
-
+    var identificador = document.querySelector("input").value;
+    
     //Mostramos los datos dependiendo de la consulta
     if (api_url == 'http://localhost:5000/vehiculo?id_vehiculo='+identificador) {
         
+        //Creamos texto informativo
+        var identificador = document.querySelector("input").value;
+
+        var sudtitulo = document.createElement("h3");
+        sudtitulo.textContent = "Vehiculo "+identificador;
+        document.querySelectorAll("div")[1].appendChild(sudtitulo);
+
+
         for (let i = 0; i<data.length; i++){
 
             var article = document.createElement("article");
@@ -59,13 +53,18 @@ function api(api_url) {
     } 
     
     else {
+
+        //Creamos texto informativo 
+        var sudtitulo = document.createElement("h3");
+        sudtitulo.textContent = "Servicios vehiculo "+identificador;
+        document.querySelectorAll("div")[1].appendChild(sudtitulo);
         
         for (let i = 0; i<data.length; i++){
 
             var article = document.createElement("article");
     
             var parrafo = document.createElement("p");
-            parrafo.textContent = "Nombre: "+data[i].Nombre+" / Precio: "+data[i].Precio+" / tipo_servicio: "+data[i].tipo_servicio+" / descripcion: "+data[i].descripcion+" / fecha: "+data[i].fecha;
+            parrafo.textContent = "Nombre: "+data[i].Nombre+" / Precio: "+data[i].Precio+" € / tipo_servicio: "+data[i].tipo_servicio+" / descripcion: "+data[i].descripcion+" / fecha: "+data[i].fecha;
             article.appendChild(parrafo);
     
             document.querySelectorAll("div")[1].appendChild(article);
